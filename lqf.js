@@ -7,6 +7,7 @@
  * 保留一位小数 keepDecimal()
  * 只能是数字 isNum()
  * 验证车架号 getCheckCode()
+ * 只能输入大于0的正整数 integerGtzero 	
  */
 
 
@@ -139,3 +140,7 @@ return isNaN(Number(value));
 	
 			return bl;
 		}
+
+	function integerGtzero(value){
+		return /^\+?[1-9]\d*$/.test(value)
+	}
