@@ -7,7 +7,8 @@
  * 保留一位小数 keepDecimal()
  * 只能是数字 isNum()
  * 验证车架号 getCheckCode()
- * 只能输入大于0的正整数 integerGtzero 	
+ * 只能输入大于0的正整数 integerGtzero() 	
+ * 对金钱的正则验证 costVerification()
  */
 
 
@@ -141,6 +142,7 @@ return isNaN(Number(value));
 			return bl;
 		}
 
-	function integerGtzero(value){
-		return /^\+?[1-9]\d*$/.test(value)
+	
+	function costVerification(value){
+		return /^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/.test(value)
 	}
